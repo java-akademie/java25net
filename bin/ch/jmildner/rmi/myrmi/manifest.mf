@@ -1,1 +1,0 @@
-Main-Class: ch.jmildner.rmi.myrmi.KarteiServer
