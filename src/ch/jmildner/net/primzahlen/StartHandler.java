@@ -2,7 +2,7 @@ package ch.jmildner.net.primzahlen;
 
 import java.io.IOException;
 
-import ch.java_akademie.eetools.SocketChannel;
+import ch.java_akademie.tools_ee.SocketChannel;
 
 public class StartHandler implements Runnable
 {

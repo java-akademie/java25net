@@ -4,8 +4,8 @@ import java.math.BigInteger;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import ch.java_akademie.eetools.ChannelFactory;
-import ch.java_akademie.eetools.SocketChannel;
+import ch.java_akademie.tools_ee.ChannelFactory;
+import ch.java_akademie.tools_ee.SocketChannel;
 
 public class PrimClient
 {
@@ -74,8 +74,7 @@ public class PrimClient
 
 			ch = ChannelFactory.getChannel(host, 4712);
 
-			for (Enumeration<BigInteger> e = bigNumberList.elements(); e
-					.hasMoreElements();)
+			for (Enumeration<BigInteger> e = bigNumberList.elements(); e.hasMoreElements();)
 			{
 				BigInteger bigPrim = e.nextElement();
 				ch.send(bigPrim);
