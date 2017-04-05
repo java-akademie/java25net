@@ -16,7 +16,7 @@ public class DayTimeServer
 
 		DayTimeService(Socket s)
 		{
-			System.out.println("DayTimeService gestartet");
+			//System.out.println("DayTimeService gestartet");
 			socket = s;
 		}
 
@@ -45,15 +45,20 @@ public class DayTimeServer
 
 	public static void main(String[] args) throws Exception
 	{
-		System.out.println("start DayTimeServer");
-
-		@SuppressWarnings("resource")
-		ServerSocket serverSocket = new ServerSocket(13);
+		ServerSocket serverSocket = new ServerSocket(1300);
 
 		while (true)
 		{
 			Socket socket = serverSocket.accept();
+			
+			if (socket.getPort() == 1301)
+			{
+				break;
+			}
+			
 			new DayTimeService(socket).start();
 		}
+		
+		serverSocket.close();
 	}
 }

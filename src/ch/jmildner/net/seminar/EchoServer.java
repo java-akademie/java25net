@@ -13,7 +13,6 @@ public class EchoServer
 	{
 		Socket socket;
 
-
 		EchoService(Socket s)
 		{
 			socket = s;
@@ -24,11 +23,15 @@ public class EchoServer
 		public void run()
 		{
 			System.out.println("EchoService gestartet ...");
+			
 			try
 			{
 				PrintWriter pw = NetTools.getPrintWriter(socket);
+				
 				BufferedReader br = NetTools.getBufferedReader(socket);
+				
 				String buffer = "";
+				
 				while (!(buffer = br.readLine()).equals("$$$"))
 				{
 					pw.println("..." + buffer);
@@ -36,13 +39,15 @@ public class EchoServer
 				}
 
 				pw.close();
+				
 				socket.close();
-				System.out.println("EchoService beendet");
 			}
 			catch (Exception e)
 			{
 				e.printStackTrace();
 			}
+			
+			System.out.println("EchoService beendet");
 		}
 	}
 
@@ -51,13 +56,22 @@ public class EchoServer
 	{
 		System.out.println("start EchoServer");
 
-		@SuppressWarnings("resource")
 		ServerSocket serverSocket = new ServerSocket(7000);
 
 		while (true)
 		{
 			Socket socket = serverSocket.accept();
+			
+			if (socket.getPort() == 64000)
+			{
+				break;
+			}
+			
 			new EchoService(socket).start();
 		}
+
+		serverSocket.close();
+
+		System.out.println("stopp EchoServer");
 	}
 }
