@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 import ch.java_akademie.tools.NetTools;
 
