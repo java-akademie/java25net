@@ -22,7 +22,7 @@ public class RechnerServer
 
 		private String berechne(String frage)
 		{
-			return "weis ich nicht";
+			return "weis ich nicht  "+frage;
 		}
 
 
