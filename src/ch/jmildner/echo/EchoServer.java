@@ -7,7 +7,7 @@ import ch.java_akademie.tools.MyTools;
 
 public class EchoServer extends Thread
 {
-	static final int PORT = 8080;
+	static final int PORT = 8081;
 	static boolean weiter = true;
 	static ServerSocket serverSocket;
 

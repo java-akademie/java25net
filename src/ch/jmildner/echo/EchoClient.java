@@ -23,7 +23,7 @@ public class EchoClient extends Thread
 
 	public EchoClient() throws Exception
 	{
-		socket = new Socket("localhost", 8080);
+		socket = new Socket("localhost", 8081);
 		br = new BufferedReader(new InputStreamReader(
 				socket.getInputStream()));
 		pw = new PrintWriter(new OutputStreamWriter(

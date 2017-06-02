@@ -1,7 +1,7 @@
 package ch.jmildner.telematik.socket.complex;
 
-import ch.java_akademie.eetools.Debug;
-import ch.java_akademie.eetools.SocketChannel;
+import ch.java_akademie.tools_ee.Debug;
+import ch.java_akademie.tools_ee.SocketChannel;
 
 public class EchoService extends Thread
 {

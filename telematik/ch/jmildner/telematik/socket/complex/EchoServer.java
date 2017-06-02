@@ -1,7 +1,7 @@
 package ch.jmildner.telematik.socket.complex;
 
-import ch.java_akademie.eetools.ChannelFactory;
-import ch.java_akademie.eetools.Debug;
+import ch.java_akademie.tools_ee.ChannelFactory;
+import ch.java_akademie.tools_ee.Debug;
 
 public class EchoServer
 {

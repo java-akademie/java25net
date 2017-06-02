@@ -1,9 +1,9 @@
 package ch.jmildner.telematik.socket.complex;
 
 
-import ch.java_akademie.eetools.ChannelFactory;
-import ch.java_akademie.eetools.Debug;
-import ch.java_akademie.eetools.SocketChannel;
+import ch.java_akademie.tools_ee.ChannelFactory;
+import ch.java_akademie.tools_ee.Debug;
+import ch.java_akademie.tools_ee.SocketChannel;
 
 public class EchoClient extends Thread
 {
@@ -12,7 +12,7 @@ public class EchoClient extends Thread
 
 	public static void main(String[] args) throws Exception
 	{
-		for (int i = 1; i <= 100; i++)
+		for (int i = 1; i <= 10; i++)
 		{
 			test(i);
 		}
