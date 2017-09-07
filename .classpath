@@ -7,12 +7,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="socket"/>
-	<classpathentry kind="src" output="target/classes" path="rmi">
+	<classpathentry excluding="**" kind="src" output="target/classes" path="rmi">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="telematik">
+	<classpathentry excluding="**" kind="src" output="target/classes" path="telematik">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
