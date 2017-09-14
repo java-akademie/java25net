@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.NetTools;
 
 public class EchoClient
 {

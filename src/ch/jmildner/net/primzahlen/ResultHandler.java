@@ -3,7 +3,7 @@ package ch.jmildner.net.primzahlen;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import ch.java_akademie.tools_ee.SocketChannel;
+import ch.jmb.tools_ee.SocketChannel;
 
 
 public class ResultHandler implements Runnable

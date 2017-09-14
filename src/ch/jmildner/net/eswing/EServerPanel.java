@@ -8,7 +8,7 @@ import java.net.Socket;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
-import ch.java_akademie.tools.MyPanel;
+import ch.jmb.tools.MyPanel;
 
 public class EServerPanel extends MyPanel
 {

@@ -10,8 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.java_akademie.tools.MyPanel;
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.MyPanel;
+import ch.jmb.tools.NetTools;
 
 public class EchoClientPanel extends MyPanel
 {

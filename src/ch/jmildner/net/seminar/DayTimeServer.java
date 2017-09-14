@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.NetTools;
 
 public class DayTimeServer
 {

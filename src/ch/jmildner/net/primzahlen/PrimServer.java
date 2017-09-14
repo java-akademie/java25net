@@ -6,7 +6,8 @@ import java.io.PrintStream;
 import java.math.BigInteger;
 import java.util.Random;
 
-import ch.java_akademie.tools_ee.ChannelFactory;
+import ch.jmb.tools_ee.ChannelFactory;
+
 
 public class PrimServer
 {

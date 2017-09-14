@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.NetTools;
 
 public class Server
 {

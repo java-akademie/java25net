@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.Socket;
 
-import ch.java_akademie.tools.NetTools;
+import ch.jmb.tools.NetTools;
 
 public class DayTimeTest
 {

@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.MyTools2;
+import ch.jmb.tools.MyTools;
+import ch.jmb.tools.MyTools2;
 
 class PortScan extends Thread
 {

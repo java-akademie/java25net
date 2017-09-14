@@ -4,8 +4,9 @@ import java.math.BigInteger;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import ch.java_akademie.tools_ee.ChannelFactory;
-import ch.java_akademie.tools_ee.SocketChannel;
+import ch.jmb.tools_ee.ChannelFactory;
+import ch.jmb.tools_ee.SocketChannel;
+
 
 public class PrimClient
 {
