@@ -3,7 +3,7 @@ package ch.jmildner.echo;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class EchoServer extends Thread
 {

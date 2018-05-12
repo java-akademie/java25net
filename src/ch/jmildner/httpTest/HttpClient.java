@@ -9,7 +9,7 @@ import java.net.URLConnection;
 import java.util.Iterator;
 import java.util.Vector;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class HttpClient
 {

@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class EchoService extends Thread
 {

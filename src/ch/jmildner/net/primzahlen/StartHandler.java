@@ -1,8 +1,7 @@
 package ch.jmildner.net.primzahlen;
 
 import java.io.IOException;
-
-import ch.jmb.tools_ee.SocketChannel;
+import java.nio.channels.SocketChannel;
 
 public class StartHandler implements Runnable
 {
