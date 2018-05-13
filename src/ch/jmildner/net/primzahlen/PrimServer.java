@@ -9,9 +9,11 @@ import java.util.Random;
 import ch.jmb.tools_ee.ChannelFactory;
 
 
+
 public class PrimServer
 {
-	private static BigInteger bigNumber = new BigInteger(512, new Random());
+	private static BigInteger bigNumber = new BigInteger(512,
+			new Random());
 	private static PrintStream primFile = null;
 	public static int nBigNumber = 0;
 
@@ -50,7 +52,8 @@ public class PrimServer
 		{
 			try
 			{
-				primFile = new PrintStream(new FileOutputStream("prim.txt"));
+				primFile = new PrintStream(
+						new FileOutputStream("prim.txt"));
 			}
 			catch (FileNotFoundException e)
 			{
@@ -74,7 +77,8 @@ public class PrimServer
 				{
 					try
 					{
-						new Thread(new ResultHandler(cf.getChannel())).start();
+						new Thread(new ResultHandler(cf.getChannel()))
+								.start();
 					}
 					catch (Exception e)
 					{
@@ -101,7 +105,8 @@ public class PrimServer
 					try
 					{
 
-						new Thread(new StartHandler(cf.getChannel())).start();
+						new Thread(new StartHandler(cf.getChannel()))
+								.start();
 					}
 					catch (Exception e)
 					{

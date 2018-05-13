@@ -29,7 +29,7 @@ public class EClientPanel extends MyPanel
 
 	public EClientPanel()
 	{
-		super(4, 10, true);
+
 		makeTheLayout();
 		addTheListener();
 	}
@@ -55,7 +55,6 @@ public class EClientPanel extends MyPanel
 		});
 		stopp.addActionListener(new ActionListener()
 		{
-
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
@@ -77,14 +76,15 @@ public class EClientPanel extends MyPanel
 
 
 
-//	public JTextArea getTa()
-//	{
-//		return ta;
-//	}
+	// public JTextArea getTa()
+	// {
+	// return ta;
+	// }
 
 
 	private void makeTheLayout()
 	{
+		init(4, 10, true);
 		addCaptionCenter("ECHO_CLIENT", 5, 1, 4);
 
 		add(zeile, 10, 1, 3);
@@ -99,8 +99,8 @@ public class EClientPanel extends MyPanel
 
 	private void send() throws Exception
 	{
-		final int PORT=5555;
-		
+		final int PORT = 5555;
+
 		Socket socket = new Socket("localhost", PORT);
 
 		BufferedReader br = NetTools.getBufferedReader(socket);
@@ -124,7 +124,7 @@ public class EClientPanel extends MyPanel
 			buff = br.readLine();
 			ta.append(buff + "\n");
 		}
-		
+
 		pw.println("$$$");
 		pw.flush();
 		br.close();
