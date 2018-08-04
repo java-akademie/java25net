@@ -6,6 +6,7 @@ public class EServerFrame extends JFrame
 {
 	private static final long serialVersionUID = 1L;
 
+
 	public EServerFrame()
 	{
 		super("EchoServer");
@@ -17,7 +18,8 @@ public class EServerFrame extends JFrame
 		setVisible(true);
 
 	}
-	
+
+
 	public static void main(String[] args)
 	{
 		new EServerFrame();

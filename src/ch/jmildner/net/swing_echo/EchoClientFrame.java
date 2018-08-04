@@ -13,7 +13,7 @@ public class EchoClientFrame extends JFrame
 	public EchoClientFrame()
 	{
 		super("EchoClient");
-		add(new EchoClientPanel((int)(Math.random()*1000)));
+		add(new EchoClientPanel((int) (Math.random() * 1000)));
 
 		setLocation(500, 200);
 		pack();

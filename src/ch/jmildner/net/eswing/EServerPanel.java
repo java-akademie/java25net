@@ -8,7 +8,7 @@ import java.net.Socket;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class EServerPanel extends MyPanel
 {
@@ -41,7 +41,7 @@ public class EServerPanel extends MyPanel
 
 	public EServerPanel()
 	{
-		super(4, 10, false);
+		super();
 
 		makeTheLayout();
 		addTheListener();

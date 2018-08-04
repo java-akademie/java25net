@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class ChatClientFrame extends JFrame
 {
@@ -18,7 +18,7 @@ public class ChatClientFrame extends JFrame
 	{
 		super(title);
 
-		MyPanel mp = new MyPanel(1, 40, false);
+		MyPanel mp = new MyPanel();
 
 		mp.addTextArea(output, 10, 1, 1, 1);
 		mp.add(input, 20, 1, 1);

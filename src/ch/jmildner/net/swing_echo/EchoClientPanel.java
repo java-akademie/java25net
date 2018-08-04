@@ -10,13 +10,13 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
 import ch.jmb.tools.NetTools;
+import ch.jmildner.tools.MyPanel;
 
 public class EchoClientPanel extends MyPanel
 {
 	private int id;
-	
+
 	private static final long serialVersionUID = 1L;
 	private JTextField zeile = new JTextField("", 20);
 	private JTextField anz = new JTextField("", 5);
@@ -28,8 +28,8 @@ public class EchoClientPanel extends MyPanel
 
 	public EchoClientPanel(int id)
 	{
-		super(4, 10, true);
-		this.id=id;
+		super();
+		this.id = id;
 		makeTheLayout();
 		addTheListener();
 	}
@@ -124,7 +124,7 @@ public class EchoClientPanel extends MyPanel
 
 		for (int i = 1; i <= a; i++)
 		{
-			pw.println(id+" "+z + "-" + i);
+			pw.println(id + " " + z + "-" + i);
 			pw.flush();
 			buff = br.readLine();
 			ta.append(buff + "\n");

@@ -8,7 +8,7 @@ import java.net.Socket;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class EchoServerPanel extends MyPanel
 {
@@ -68,7 +68,7 @@ public class EchoServerPanel extends MyPanel
 
 	public EchoServerPanel()
 	{
-		super(4, 10, true);
+		super();
 		makeTheLayout();
 		addTheListener();
 		instance = this;

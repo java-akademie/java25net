@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class ChatClient extends JFrame
 {
@@ -101,7 +101,7 @@ public class ChatClient extends JFrame
 		this.url = url;
 		this.port = port;
 
-		MyPanel mp = new MyPanel(1, 40, false);
+		MyPanel mp = new MyPanel();
 		mp.addTextArea(output, 10, 1, 1, 1);
 		mp.add(input, 20, 1, 1);
 		add(mp);
