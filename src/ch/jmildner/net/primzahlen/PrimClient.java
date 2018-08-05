@@ -1,91 +1,91 @@
 package ch.jmildner.net.primzahlen;
 
+import ch.jmildner.tools_ee.ChannelFactory;
+import ch.jmildner.tools_ee.SocketChannel;
 import java.math.BigInteger;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import ch.jmb.tools_ee.ChannelFactory;
-import ch.jmb.tools_ee.SocketChannel;
-
 
 public class PrimClient
 {
-	public static void main(String[] args) throws Exception
-	{
-		String host;
 
-		if (args.length > 0)
-		{
-			host = args[0];
-		}
-		else
-		{
-			host = "localhost";
-		}
+    public static void main(String[] args) throws Exception
+    {
+        String host;
 
-		while (true)
-		{
-			Vector<BigInteger> bigNumberList = new Vector<BigInteger>();
+        if (args.length > 0)
+        {
+            host = args[0];
+        }
+        else
+        {
+            host = "localhost";
+        }
 
-			SocketChannel ch = ChannelFactory.getChannel(host, 4711);
+        while (true)
+        {
+            Vector<BigInteger> bigNumberList = new Vector<BigInteger>();
 
-			int i = 0;
+            SocketChannel ch = ChannelFactory.getChannel(host, 4711);
 
-			System.out.println("PrimSearch gestartet...");
+            int i = 0;
 
-			BigInteger bigNumber = (BigInteger) ch.receive();
+            System.out.println("PrimSearch gestartet...");
 
-			System.out.println(bigNumber);
+            BigInteger bigNumber = (BigInteger) ch.receive();
 
-			BigInteger bigNumberEnd = (BigInteger) ch.receive();
+            System.out.println(bigNumber);
 
-			System.out.println(bigNumberEnd);
+            BigInteger bigNumberEnd = (BigInteger) ch.receive();
 
-			ch.close();
+            System.out.println(bigNumberEnd);
 
-			while (bigNumber.compareTo(bigNumberEnd) < 0)
-			{
-				// bigNumber pr�fen, wenn Primzahl, dann in Liste
-				// aufnehmen...
-				if (bigNumber.isProbablePrime(Integer.MAX_VALUE - 1))
-				{
-					System.out.print("#");
-					bigNumberList.addElement(bigNumber);
-				}
-				else
-				{
-					// Nur zur Anzeige, dass der Client noch lebt...
-					System.out.print(".");
-				}
+            ch.close();
 
-				i++;
+            while (bigNumber.compareTo(bigNumberEnd) < 0)
+            {
+                // bigNumber pr�fen, wenn Primzahl, dann in Liste
+                // aufnehmen...
+                if (bigNumber.isProbablePrime(Integer.MAX_VALUE - 1))
+                {
+                    System.out.print("#");
+                    bigNumberList.addElement(bigNumber);
+                }
+                else
+                {
+                    // Nur zur Anzeige, dass der Client noch lebt...
+                    System.out.print(".");
+                }
 
-				if (i % 100 == 0)
-				{
-					System.out.println();
-				}
-				bigNumber = bigNumber.add(BigInteger.ONE);
-			}
+                i++;
 
-			// Gefundene Primzahlen senden...
-			if (bigNumberList.isEmpty())
-			{
-				continue;
-			}
+                if (i % 100 == 0)
+                {
+                    System.out.println();
+                }
+                bigNumber = bigNumber.add(BigInteger.ONE);
+            }
 
-			ch = ChannelFactory.getChannel(host, 4712);
+            // Gefundene Primzahlen senden...
+            if (bigNumberList.isEmpty())
+            {
+                continue;
+            }
 
-			for (Enumeration<BigInteger> e = bigNumberList.elements(); e.hasMoreElements();)
-			{
-				BigInteger bigPrim = e.nextElement();
-				ch.send(bigPrim);
-			}
+            ch = ChannelFactory.getChannel(host, 4712);
 
-			ch.send("-EOF-");
+            for (Enumeration<BigInteger> e = bigNumberList.elements(); e.hasMoreElements();)
+            {
+                BigInteger bigPrim = e.nextElement();
+                ch.send(bigPrim);
+            }
 
-			System.out.println("PrimSearch beendet.");
+            ch.send("-EOF-");
 
-			ch.close();
-		}
-	}
+            System.out.println("PrimSearch beendet.");
+
+            ch.close();
+        }
+    }
 }

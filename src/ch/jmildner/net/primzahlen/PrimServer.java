@@ -6,7 +6,7 @@ import java.io.PrintStream;
 import java.math.BigInteger;
 import java.util.Random;
 
-import ch.jmb.tools_ee.ChannelFactory;
+import ch.jmildner.tools_ee.ChannelFactory;
 
 
 
